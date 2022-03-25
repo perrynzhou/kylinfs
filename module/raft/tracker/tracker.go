@@ -19,8 +19,8 @@ import (
 	"sort"
 	"strings"
 
-	"kylin-db/module/raft/quorum"
-	pb "kylin-db/module/raft/raftpb"
+	"kylinfs/module/raft/quorum"
+	pb "kylinfs/module/raft/raftpb"
 )
 
 // Config reflects the configuration tracked in a ProgressTracker.

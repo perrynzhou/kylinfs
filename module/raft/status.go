@@ -17,8 +17,8 @@ package raft
 import (
 	"fmt"
 
-	pb "kylin-db/module/raft/raftpb"
-	"kylin-db/module/raft/tracker"
+	pb "kylinfs/module/raft/raftpb"
+	"kylinfs/module/raft/tracker"
 )
 
 // Status contains information about this Raft peer and its view of the system.

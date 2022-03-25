@@ -23,8 +23,8 @@ import (
 	"strings"
 	"testing"
 
-	pb "kylin-db/module/raft/raftpb"
-	"kylin-db/module/raft/tracker"
+	pb "kylinfs/module/raft/raftpb"
+	"kylinfs/module/raft/tracker"
 )
 
 // nextEnts returns the appliable entries and updates the applied index

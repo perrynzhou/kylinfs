@@ -15,7 +15,7 @@
 package raft
 
 import (
-	pb "kylin-db/module/raft/raftpb"
+	pb "kylinfs/module/raft/raftpb"
 )
 
 func applyToStore(ents []pb.Entry)    {}

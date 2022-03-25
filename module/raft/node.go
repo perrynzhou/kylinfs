@@ -18,7 +18,7 @@ import (
 	"context"
 	"errors"
 
-	pb "kylin-db/module/raft/raftpb"
+	pb "kylinfs/module/raft/raftpb"
 )
 
 type SnapshotStatus int

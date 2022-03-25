@@ -18,7 +18,7 @@ import (
 	"testing"
 
 	"github.com/cockroachdb/datadriven"
-	"kylin-db/module/raft/rafttest"
+	"kylinfs/module/raft/rafttest"
 )
 
 func TestInteraction(t *testing.T) {

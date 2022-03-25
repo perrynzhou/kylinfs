@@ -14,7 +14,7 @@
 
 package raft
 
-import pb "kylin-db/module/raft/raftpb"
+import pb "kylinfs/module/raft/raftpb"
 
 // unstable.entries[i] has raft log position i+unstable.offset.
 // Note that unstable.offset may be less than the highest log

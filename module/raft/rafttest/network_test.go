@@ -18,7 +18,7 @@ import (
 	"testing"
 	"time"
 
-	"kylin-db/module/raft/raftpb"
+	"kylinfs/module/raft/raftpb"
 )
 
 func TestNetworkDrop(t *testing.T) {

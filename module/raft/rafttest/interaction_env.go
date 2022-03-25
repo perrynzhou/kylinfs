@@ -20,8 +20,8 @@ import (
 	"math"
 	"strings"
 
-	"kylin-db/module/raft"
-	pb "kylin-db/module/raft/raftpb"
+	"kylinfs/module/raft"
+	pb "kylinfs/module/raft/raftpb"
 )
 
 // InteractionOpts groups the options for an InteractionEnv.

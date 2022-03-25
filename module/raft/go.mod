@@ -1,4 +1,4 @@
-module kylin-db/module/raft
+module kylinfs/module/raft
 
 go 1.16
 

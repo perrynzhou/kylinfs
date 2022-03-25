@@ -22,9 +22,9 @@ import (
 	"reflect"
 	"testing"
 
-	"kylin-db/module/raft/quorum"
-	pb "kylin-db/module/raft/raftpb"
-	"kylin-db/module/raft/tracker"
+	"kylinfs/module/raft/quorum"
+	pb "kylinfs/module/raft/raftpb"
+	"kylinfs/module/raft/tracker"
 )
 
 // rawNodeAdapter is essentially a lint that makes sure that RawNode implements

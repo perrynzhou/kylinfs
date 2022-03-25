@@ -21,8 +21,8 @@ import (
 	"sync"
 	"time"
 
-	"kylin-db/module/raft"
-	"kylin-db/module/raft/raftpb"
+	"kylinfs/module/raft"
+	"kylinfs/module/raft/raftpb"
 )
 
 type node struct {

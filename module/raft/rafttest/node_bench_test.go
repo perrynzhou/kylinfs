@@ -19,7 +19,7 @@ import (
 	"testing"
 	"time"
 
-	"kylin-db/module/raft"
+	"kylinfs/module/raft"
 )
 
 func BenchmarkProposal3Nodes(b *testing.B) {

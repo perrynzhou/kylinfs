@@ -15,8 +15,8 @@
 package confchange
 
 import (
-	pb "kylin-db/module/raft/raftpb"
-	"kylin-db/module/raft/tracker"
+	pb "kylinfs/module/raft/raftpb"
+	"kylinfs/module/raft/tracker"
 )
 
 // toConfChangeSingle translates a conf state into 1) a slice of operations creating

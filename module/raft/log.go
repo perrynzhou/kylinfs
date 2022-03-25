@@ -18,7 +18,7 @@ import (
 	"fmt"
 	"log"
 
-	pb "kylin-db/module/raft/raftpb"
+	pb "kylinfs/module/raft/raftpb"
 )
 
 type raftLog struct {

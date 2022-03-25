@@ -25,10 +25,10 @@ import (
 	"sync"
 	"time"
 
-	"kylin-db/module/raft/confchange"
-	"kylin-db/module/raft/quorum"
-	pb "kylin-db/module/raft/raftpb"
-	"kylin-db/module/raft/tracker"
+	"kylinfs/module/raft/confchange"
+	"kylinfs/module/raft/quorum"
+	pb "kylinfs/module/raft/raftpb"
+	"kylinfs/module/raft/tracker"
 )
 
 // None is a placeholder node ID used when there is no leader.

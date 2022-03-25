@@ -18,7 +18,7 @@ import (
 	"errors"
 	"sync"
 
-	pb "kylin-db/module/raft/raftpb"
+	pb "kylinfs/module/raft/raftpb"
 )
 
 // ErrCompacted is returned by Storage.Entries/Compact when a requested

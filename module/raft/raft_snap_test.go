@@ -17,7 +17,7 @@ package raft
 import (
 	"testing"
 
-	pb "kylin-db/module/raft/raftpb"
+	pb "kylinfs/module/raft/raftpb"
 )
 
 var (

@@ -32,7 +32,7 @@ import (
 	"sort"
 	"testing"
 
-	pb "kylin-db/module/raft/raftpb"
+	pb "kylinfs/module/raft/raftpb"
 )
 
 func TestFollowerUpdateTermFromMessage(t *testing.T) {

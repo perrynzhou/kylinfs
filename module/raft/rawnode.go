@@ -17,8 +17,8 @@ package raft
 import (
 	"errors"
 
-	pb "kylin-db/module/raft/raftpb"
-	"kylin-db/module/raft/tracker"
+	pb "kylinfs/module/raft/raftpb"
+	"kylinfs/module/raft/tracker"
 )
 
 // ErrStepLocalMsg is returned when try to step a local raft message

@@ -19,7 +19,7 @@ import (
 	"sync"
 	"time"
 
-	"kylin-db/module/raft/raftpb"
+	"kylinfs/module/raft/raftpb"
 )
 
 // a network interface

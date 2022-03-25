@@ -22,8 +22,8 @@ import (
 	"testing"
 
 	"github.com/cockroachdb/datadriven"
-	pb "kylin-db/module/raft/raftpb"
-	"kylin-db/module/raft/tracker"
+	pb "kylinfs/module/raft/raftpb"
+	"kylinfs/module/raft/tracker"
 )
 
 func TestConfChangeDataDriven(t *testing.T) {

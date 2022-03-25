@@ -17,7 +17,7 @@ package raft
 import (
 	"errors"
 
-	pb "kylin-db/module/raft/raftpb"
+	pb "kylinfs/module/raft/raftpb"
 )
 
 // Bootstrap initializes the RawNode for first use by appending configuration

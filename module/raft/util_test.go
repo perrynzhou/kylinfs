@@ -20,7 +20,7 @@ import (
 	"strings"
 	"testing"
 
-	pb "kylin-db/module/raft/raftpb"
+	pb "kylinfs/module/raft/raftpb"
 )
 
 var testFormatter EntryFormatter = func(data []byte) string {

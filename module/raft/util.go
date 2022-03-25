@@ -19,7 +19,7 @@ import (
 	"fmt"
 	"strings"
 
-	pb "kylin-db/module/raft/raftpb"
+	pb "kylinfs/module/raft/raftpb"
 )
 
 func (st StateType) MarshalJSON() ([]byte, error) {

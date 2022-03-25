@@ -25,7 +25,7 @@ import (
 	"time"
 
 	"go.etcd.io/etcd/client/pkg/v3/testutil"
-	"kylin-db/module/raft/raftpb"
+	"kylinfs/module/raft/raftpb"
 )
 
 // readyWithTimeout selects from n.Ready() with a 1-second timeout. It

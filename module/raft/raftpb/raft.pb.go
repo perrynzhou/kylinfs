@@ -68,7 +68,7 @@ func (EntryType) EnumDescriptor() ([]byte, []int) {
 }
 
 // For description of different message types, see:
-// https://pkg.go.dev/kylin-db/module/raft#hdr-MessageType
+// https://pkg.go.dev/kylinfs/module/raft#hdr-MessageType
 type MessageType int32
 
 const (
