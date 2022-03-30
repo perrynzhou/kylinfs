@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/kylin-db.iml" filepath="$PROJECT_DIR$/.idea/kylin-db.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/kylinfs.iml" filepath="$PROJECT_DIR$/.idea/kylinfs.iml" />
     </modules>
   </component>
 </project>
