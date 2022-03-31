@@ -1,0 +1,14 @@
+syntax = "proto3";
+package dbservice;
+option go_package = "../pb";
+
+message ChunkServerHeartBeatReq {
+  string  uuid=1;
+  string ip =2;
+  string port=3;
+  int32 block_mb_size=4;
+}
+message ChunkServerHeartBeatResp {
+  int32   code=2;
+  string  msg=3;
+}

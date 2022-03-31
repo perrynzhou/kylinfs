@@ -5,17 +5,36 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c42eb867-f953-4a81-9b88-fc3846ed0c8f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/raft/versiopb/version.pb.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/raft/versiopb/version.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chuck_service/cmd/service/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chuck_service/conf/conf.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/meta_service/drpc/heartbeat_service/heartbeat_service.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/meta_service/proto/heartbeat.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/meta_server/Cargo.toml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/meta_server/build.rs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/meta_server/src/bindings/bindings.rs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/meta_server/src/main.rs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/meta_server/wrapper.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/module/chunk_server/1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/module/kylinfs/1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/module/meta_server/1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/module/raft/.travis.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/module/raft/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/module/raft/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/module/raft/README.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/module/raft/include/raft.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/module/raft/include/raft_log.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/module/raft/include/raft_private.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/module/raft/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/module/raft/src/raft_log.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/module/raft/src/raft_node.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/module/raft/src/raft_server.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/module/raft/src/raft_server_properties.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/module/raft/tests/CuTest.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/module/raft/tests/CuTest.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/module/raft/tests/make-tests.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/module/raft/tests/mock_send_functions.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/module/raft/tests/mock_send_functions.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/module/raft/tests/test_log.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/module/raft/tests/test_node.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/module/raft/tests/test_scenario.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/module/raft/tests/test_server.c" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,6 +59,7 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2768v2LfMLU0eRe3G4LuYwV4Gbq" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -49,6 +69,8 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="configurable..is.expanded" value="false" />
+    <property name="configurable.GoLibrariesConfigurable.is.expanded" value="true" />
     <property name="go.format.on.save.advertiser.fired" value="true" />
     <property name="go.formatter.settings.were.checked" value="true" />
     <property name="go.import.settings.migrated" value="true" />
@@ -56,25 +78,13 @@
     <property name="go.sdk.automatically.set" value="true" />
     <property name="go.watchers.conflict.with.on.save.actions.check.performed" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.DirectoryMappings" />
   </component>
-  <component name="RunManager">
-    <configuration default="true" type="GoApplicationRunConfiguration" factoryName="Go Application">
-      <module name="kylinfs" />
-      <working_directory value="$PROJECT_DIR$" />
-      <kind value="FILE" />
-      <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$" />
-      <method v="2" />
-    </configuration>
-    <configuration default="true" type="GoTestRunConfiguration" factoryName="Go Test">
-      <module name="kylinfs" />
-      <working_directory value="$PROJECT_DIR$" />
-      <kind value="DIRECTORY" />
-      <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$" />
-      <framework value="gotest" />
-      <method v="2" />
-    </configuration>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/chuck_service/cmd" />
+      <recent name="$PROJECT_DIR$/chuck_service/conf" />
+    </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TypeScriptGeneratedFilesManager">
@@ -93,5 +103,10 @@
   </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>
+    <environment>
+      <map>
+        <entry key="GOPROXY" value="https://goproxy.io" />
+      </map>
+    </environment>
   </component>
 </project>

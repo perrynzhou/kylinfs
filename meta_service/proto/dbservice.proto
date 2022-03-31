@@ -1,0 +1,78 @@
+//
+// (C) Copyright 2019-2021 Intel Corporation.
+//
+// SPDX-License-Identifier: BSD-2-Clause-Patent
+//
+
+syntax = "proto3";
+package dbservice;
+option go_package = "../pb";
+
+message CreateSchemaReq {
+	string  name=1;
+	
+}
+message CreateSchemaResp {
+	string name=1;
+	int32   code=2;
+	string  msg=3;
+}
+
+message QuerySchemaReq {
+	string  name=1;
+	
+}
+message QuerySchemaResp {
+	string name=1;
+	int32  code=2;
+	string msg=3;
+	string  meta=4;
+}
+
+message DropSchemaReq {
+	string  name=1;
+	
+}
+message DropSchemaResp {
+	string name=1;
+	int32 code=2;
+	string  msg=3;
+}
+
+
+
+message PutKvReq {
+	string schema_name=1;
+	string key=2;
+	string value=3;
+}
+
+message PutKvResp {
+	string schema_name=1;
+	int32 code=2;
+	string msg=3;
+}
+
+message GetKvReq {
+	string schema_name=1;
+	string key=2;
+}
+message GetKvResp {
+	string schema_name=1;
+	string key=2;
+	string value=3;
+	int32 code=4;
+	string msg=5;
+}
+
+message DelKvReq {
+	string schema_name=1;
+	string key=2;
+}
+message DelKvResp {
+	int32 code=1;
+	string msg=2;
+	string schema_name=3;
+	string key=4;
+	string value=5;
+}

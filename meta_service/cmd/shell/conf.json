@@ -1,0 +1,4 @@
+{
+  "backend_addr": "127.0.0.1",
+  "backend_port": 50051
+ }
