@@ -2,7 +2,7 @@
 // versions:
 // - protoc-gen-go-grpc v1.2.0
 // - protoc             v3.6.1
-// source: drpc.proto
+// source: service.proto
 
 package pb
 
@@ -35,7 +35,7 @@ func NewDrpcServiceClient(cc grpc.ClientConnInterface) DrpcServiceClient {
 
 func (c *drpcServiceClient) DrpcFunc(ctx context.Context, in *Request, opts ...grpc.CallOption) (*Response, error) {
 	out := new(Response)
-	err := c.cc.Invoke(ctx, "/drpc.DrpcService/DrpcFunc", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/service.DrpcService/DrpcFunc", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -80,7 +80,7 @@ func _DrpcService_DrpcFunc_Handler(srv interface{}, ctx context.Context, dec fun
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/drpc.DrpcService/DrpcFunc",
+		FullMethod: "/service.DrpcService/DrpcFunc",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(DrpcServiceServer).DrpcFunc(ctx, req.(*Request))
@@ -92,7 +92,7 @@ func _DrpcService_DrpcFunc_Handler(srv interface{}, ctx context.Context, dec fun
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
 var DrpcService_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "drpc.DrpcService",
+	ServiceName: "service.DrpcService",
 	HandlerType: (*DrpcServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
@@ -101,5 +101,5 @@ var DrpcService_ServiceDesc = grpc.ServiceDesc{
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
-	Metadata: "drpc.proto",
+	Metadata: "service.proto",
 }

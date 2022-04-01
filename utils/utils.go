@@ -4,11 +4,11 @@
 // SPDX-License-Identifier: BSD-2-Clause-Patent
 //
 
-package dbservice
+package utils
 
 import (
 	"errors"
-	"kylinfs/meta_service/drpc/pb"
+	"kylinfs/pb"
 	"net"
 	"sync"
 

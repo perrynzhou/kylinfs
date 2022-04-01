@@ -4,9 +4,9 @@ import (
 	"flag"
 	"fmt"
 	"kylinfs/meta_service/conf"
-	"kylinfs/meta_service/drpc/dbservice"
-	"kylinfs/meta_service/drpc/pb"
-	"kylinfs/meta_service/util"
+	"kylinfs/meta_service/service"
+	"kylinfs/pb"
+	"kylinfs/utils"
 	"net"
 	"os"
 	"os/signal"
@@ -25,7 +25,7 @@ var (
 )
 
 func init() {
-	logHook := util.NewHook()
+	logHook := utils.NewHook()
 	logHook.Field = "line"
 	log.AddHook(logHook)
 	conf.GenConfTemplate()
@@ -47,7 +47,7 @@ func main() {
 	}
 	s := grpc.NewServer()
 
-	confService := dbservice.NewDbService(cf.Threads)
+	confService := service.NewDbService(cf.Threads)
 	pb.RegisterDrpcServiceServer(s, confService)
 	log.Printf("server listening at %v", lis.Addr())
 	go func() {

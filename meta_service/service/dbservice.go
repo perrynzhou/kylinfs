@@ -1,17 +1,18 @@
-package dbservice
+package service
 
 import (
 	"context"
 	"errors"
 	"fmt"
-	"kylinfs/meta_service/drpc/pb"
+	"kylinfs/pb"
 	"sync/atomic"
 
 	log "github.com/sirupsen/logrus"
+	"kylinfs/utils"
 )
 
 const (
-	drpcSockName = "drpc"
+	drpcSockName = "service"
 )
 const (
 	DRPC_METHOD_CREATE_SCHEMA = 201
@@ -56,7 +57,7 @@ func (cs *DbService) DrpcFunc(ctx context.Context, Req *pb.Request) (*pb.Respons
 
 	index := int(cs.count % uint64(len(cs.drpcSockets)))
 	atomic.AddUint64(&cs.count, 1)
-	c := NewClientConnection(cs.drpcSockets[index])
+	c := utils.NewClientConnection(cs.drpcSockets[index])
 	if c == nil {
 		return &pb.Response{}, errors.New("init connection failed")
 	}

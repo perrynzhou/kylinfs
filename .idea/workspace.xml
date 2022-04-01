@@ -5,36 +5,32 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c42eb867-f953-4a81-9b88-fc3846ed0c8f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/chuck_service/cmd/service/main.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chuck_service/conf/conf.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/meta_service/drpc/heartbeat_service/heartbeat_service.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/meta_service/proto/heartbeat.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/meta_service/service/healservice.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/chunk_meta.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/meta_key.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/module/chunk_server/1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/module/kylinfs/1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/module/meta_server/1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/module/raft/.travis.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/module/raft/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/module/raft/Makefile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/module/raft/README.rst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/module/raft/include/raft.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/module/raft/include/raft_log.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/module/raft/include/raft_private.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/module/raft/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/module/raft/src/raft_log.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/module/raft/src/raft_node.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/module/raft/src/raft_server.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/module/raft/src/raft_server_properties.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/module/raft/tests/CuTest.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/module/raft/tests/CuTest.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/module/raft/tests/make-tests.sh" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/module/raft/tests/mock_send_functions.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/module/raft/tests/mock_send_functions.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/module/raft/tests/test_log.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/module/raft/tests/test_node.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/module/raft/tests/test_scenario.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/module/raft/tests/test_server.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chuck_service/cmd/service/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/chuck_service/cmd/service/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/meta_service/cmd/bench/bench.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/meta_service/cmd/build.sh" beforeDir="false" afterPath="$PROJECT_DIR$/meta_service/cmd/build.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/meta_service/cmd/client/client.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/meta_service/cmd/service/service.go" beforeDir="false" afterPath="$PROJECT_DIR$/meta_service/cmd/service/meta_service.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/meta_service/cmd/shell/client.go" beforeDir="false" afterPath="$PROJECT_DIR$/meta_service/cmd/shell/client.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/meta_service/cmd/thin-client/client.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/meta_service/doc/fundb-server-design.gliffy" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/meta_service/doc/fundb-server-design.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/meta_service/doc/fundb-server.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/meta_service/doc/fundb-server.xmind" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/meta_service/drpc/dbservice/dbservice.go" beforeDir="false" afterPath="$PROJECT_DIR$/meta_service/service/dbservice.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/meta_service/drpc/dbservice/utils.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/meta_service/drpc/heartbeat_service/heartbeat_service.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/meta_service/drpc/pb/build_pb.sh" beforeDir="false" afterPath="$PROJECT_DIR$/pb/build_pb.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/meta_service/drpc/pb/dbservice.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/pb/dbservice.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/meta_service/drpc/pb/drpc.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/pb/drpc.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/meta_service/drpc/pb/drpc_grpc.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/pb/drpc_grpc.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/meta_service/proto/dbservice.proto" beforeDir="false" afterPath="$PROJECT_DIR$/proto/dbservice.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/meta_service/proto/drpc.proto" beforeDir="false" afterPath="$PROJECT_DIR$/proto/drpc.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/meta_service/proto/heartbeat.proto" beforeDir="false" afterPath="$PROJECT_DIR$/proto/heartbeat.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/meta_service/util/log_hook.go" beforeDir="false" afterPath="$PROJECT_DIR$/utils/log_hook.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,8 +78,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/chuck_service/cmd" />
-      <recent name="$PROJECT_DIR$/chuck_service/conf" />
+      <recent name="$PROJECT_DIR$/chuck_service" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/meta_service/service" />
+      <recent name="$PROJECT_DIR$/meta_service/drpc" />
+      <recent name="$PROJECT_DIR$/meta_service/drpc/utils" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />

@@ -2,13 +2,20 @@ syntax = "proto3";
 package dbservice;
 option go_package = "../pb";
 
-message ChunkServerHeartBeatReq {
+message ChunkServerHealReq {
+
   string  uuid=1;
   string ip =2;
   string port=3;
   int32 block_mb_size=4;
+  bool  is_init=5;
 }
-message ChunkServerHeartBeatResp {
+message ChunkServerHealResp {
   int32   code=2;
   string  msg=3;
+}
+
+
+service Service {
+  rpc HealFunc(ChunkServerHealReq) returns(ChunkServerHealResp) {}
 }

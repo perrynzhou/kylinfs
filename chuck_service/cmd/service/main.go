@@ -6,7 +6,7 @@ import (
 	log "github.com/sirupsen/logrus"
 	"google.golang.org/grpc"
 	"kylinfs/chuck_service/conf"
-	"kylinfs/meta_service/util"
+	"kylinfs/utils"
 	"net"
 	"os"
 	"os/signal"
@@ -22,7 +22,7 @@ var (
 )
 
 func init() {
-	logHook := util.NewHook()
+	logHook := utils.NewHook()
 	logHook.Field = "line"
 	log.AddHook(logHook)
 }
@@ -47,7 +47,7 @@ func main() {
 		confService := dbservice.NewDbService(cf.Threads)
 		pb.RegisterDrpcServiceServer(s, confService)
 		log.Printf("server listening at %v", lis.Addr())
-	
+
 	*/
 	go func() {
 		if err := s.Serve(lis); err != nil {

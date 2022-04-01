@@ -9,7 +9,7 @@ import (
 	"google.golang.org/grpc/credentials/insecure"
 	"google.golang.org/protobuf/proto"
 	"kylinfs/meta_service/conf"
-	"kylinfs/meta_service/drpc/pb"
+	"kylinfs/pb"
 	"os"
 	"time"
 )
