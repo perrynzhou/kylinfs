@@ -4,11 +4,12 @@ option go_package = "../pb";
 
 message ChunkServerHealReq {
 
-  string  uuid=1;
+  string  id=1;
   string ip =2;
   string port=3;
   int32 block_mb_size=4;
-  bool  is_init=5;
+  int64 total_mb_size=5;
+  bool  is_init=6;
 }
 message ChunkServerHealResp {
   int32   code=2;

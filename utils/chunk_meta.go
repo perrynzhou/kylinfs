@@ -6,7 +6,7 @@ type ChunkServer struct {
 	ChunkPort   string
 	BlockMbSize int
 	TotalMbSize uint64
-	RestMbSize  uint64
+	FreeMbSize  uint64
 }
 
 type ChunkMeta struct {
