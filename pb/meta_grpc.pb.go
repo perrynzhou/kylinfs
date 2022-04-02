@@ -2,7 +2,7 @@
 // versions:
 // - protoc-gen-go-grpc v1.2.0
 // - protoc             v3.19.4
-// source: heal.proto
+// source: meta.proto
 
 package pb
 
@@ -22,7 +22,7 @@ const _ = grpc.SupportPackageIsVersion7
 //
 // For semantics around ctx use and closing/ending streaming RPCs, please refer to https://pkg.go.dev/google.golang.org/grpc/?tab=doc#ClientConn.NewStream.
 type ServiceClient interface {
-	HealFunc(ctx context.Context, in *ChunkServerHealReq, opts ...grpc.CallOption) (*ChunkServerHealResp, error)
+	ModifyChunkServerMeta(ctx context.Context, in *ChunkServerHealReq, opts ...grpc.CallOption) (*ChunkServerHealResp, error)
 }
 
 type serviceClient struct {
@@ -33,9 +33,9 @@ func NewServiceClient(cc grpc.ClientConnInterface) ServiceClient {
 	return &serviceClient{cc}
 }
 
-func (c *serviceClient) HealFunc(ctx context.Context, in *ChunkServerHealReq, opts ...grpc.CallOption) (*ChunkServerHealResp, error) {
+func (c *serviceClient) ModifyChunkServerMeta(ctx context.Context, in *ChunkServerHealReq, opts ...grpc.CallOption) (*ChunkServerHealResp, error) {
 	out := new(ChunkServerHealResp)
-	err := c.cc.Invoke(ctx, "/dbservice.Service/HealFunc", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/dbservice.Service/ModifyChunkServerMeta", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -46,7 +46,7 @@ func (c *serviceClient) HealFunc(ctx context.Context, in *ChunkServerHealReq, op
 // All implementations must embed UnimplementedServiceServer
 // for forward compatibility
 type ServiceServer interface {
-	HealFunc(context.Context, *ChunkServerHealReq) (*ChunkServerHealResp, error)
+	ModifyChunkServerMeta(context.Context, *ChunkServerHealReq) (*ChunkServerHealResp, error)
 	mustEmbedUnimplementedServiceServer()
 }
 
@@ -54,8 +54,8 @@ type ServiceServer interface {
 type UnimplementedServiceServer struct {
 }
 
-func (UnimplementedServiceServer) HealFunc(context.Context, *ChunkServerHealReq) (*ChunkServerHealResp, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method HealFunc not implemented")
+func (UnimplementedServiceServer) ModifyChunkServerMeta(context.Context, *ChunkServerHealReq) (*ChunkServerHealResp, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method ModifyChunkServerMeta not implemented")
 }
 func (UnimplementedServiceServer) mustEmbedUnimplementedServiceServer() {}
 
@@ -70,20 +70,20 @@ func RegisterServiceServer(s grpc.ServiceRegistrar, srv ServiceServer) {
 	s.RegisterService(&Service_ServiceDesc, srv)
 }
 
-func _Service_HealFunc_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _Service_ModifyChunkServerMeta_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(ChunkServerHealReq)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(ServiceServer).HealFunc(ctx, in)
+		return srv.(ServiceServer).ModifyChunkServerMeta(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/dbservice.Service/HealFunc",
+		FullMethod: "/dbservice.Service/ModifyChunkServerMeta",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(ServiceServer).HealFunc(ctx, req.(*ChunkServerHealReq))
+		return srv.(ServiceServer).ModifyChunkServerMeta(ctx, req.(*ChunkServerHealReq))
 	}
 	return interceptor(ctx, in, info, handler)
 }
@@ -96,10 +96,10 @@ var Service_ServiceDesc = grpc.ServiceDesc{
 	HandlerType: (*ServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
-			MethodName: "HealFunc",
-			Handler:    _Service_HealFunc_Handler,
+			MethodName: "ModifyChunkServerMeta",
+			Handler:    _Service_ModifyChunkServerMeta_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
-	Metadata: "heal.proto",
+	Metadata: "meta.proto",
 }

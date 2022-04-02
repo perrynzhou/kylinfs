@@ -18,5 +18,5 @@ message ChunkServerHealResp {
 
 
 service Service {
-  rpc HealFunc(ChunkServerHealReq) returns(ChunkServerHealResp) {}
+  rpc ModifyChunkServerMeta(ChunkServerHealReq) returns(ChunkServerHealResp) {}
 }

@@ -9,20 +9,17 @@ import (
 )
 
 const (
-	drpcHeartBeatSockName = "heart_beat_drpc"
-)
-const (
 	DRPC_METHOD_HEAL_MODIFY = 401
 )
 
-type HealService struct {
+type MetaService struct {
 	DB           *DbService
 	chunkServers map[string]*utils.ChunkServer
 }
 
-func NewHealService(DB *DbService) (*HealService, error) {
+func NewMetaService(DB *DbService) (*MetaService, error) {
 	if DB != nil {
-		return &HealService{
+		return &MetaService{
 			DB:           DB,
 			chunkServers: make(map[string]*utils.ChunkServer),
 		}, nil
@@ -31,7 +28,7 @@ func NewHealService(DB *DbService) (*HealService, error) {
 }
 
 // func (cs *DbService) DrpcFunc(ctx context.Context, Req *pb.Request) (*pb.Response, error) {
-func (h *HealService) HealFunc(ctx context.Context, req *pb.ChunkServerHealReq) (*pb.ChunkServerHealResp, error) {
+func (h *MetaService) ModifyChunkServerMeta(ctx context.Context, req *pb.ChunkServerHealReq) (*pb.ChunkServerHealResp, error) {
 	body, err := proto.Marshal(req)
 	if err != nil {
 		return nil, err

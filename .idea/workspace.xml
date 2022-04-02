@@ -6,18 +6,14 @@
   <component name="ChangeListManager">
     <list default="true" id="c42eb867-f953-4a81-9b88-fc3846ed0c8f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/meta_service/module/dbservice/dbservice.pb-c.h" beforeDir="false" afterPath="$PROJECT_DIR$/meta_service/module/dbservice/dbservice.pb-c.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/meta_service/module/dbservice/drpc.pb-c.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/meta_service/module/dbservice/drpc.pb-c.h" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/meta_service/module/dbservice/gen_pb.sh" beforeDir="false" afterPath="$PROJECT_DIR$/meta_service/module/dbservice/gen_pb.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/meta_service/module/drpc/build.sh" beforeDir="false" afterPath="$PROJECT_DIR$/meta_service/module/drpc/build.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/meta_service/service/healservice.go" beforeDir="false" afterPath="$PROJECT_DIR$/meta_service/service/healservice.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/meta_service/module/dbservice/heal.pb-c.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/meta_service/module/dbservice/heal.pb-c.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/meta_service/service/healservice.go" beforeDir="false" afterPath="$PROJECT_DIR$/meta_service/service/metaservice.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pb/build_pb.sh" beforeDir="false" afterPath="$PROJECT_DIR$/pb/build_pb.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pb/dbservice.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/pb/dbservice.pb.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pb/drpc.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/pb/drpc.pb.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pb/drpc_grpc.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/pb/drpc_grpc.pb.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/proto/heal.proto" beforeDir="false" afterPath="$PROJECT_DIR$/proto/heal.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/chunk_meta.go" beforeDir="false" afterPath="$PROJECT_DIR$/utils/chunk_meta.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pb/heal.pb.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pb/heal_grpc.pb.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/proto/heal.proto" beforeDir="false" afterPath="$PROJECT_DIR$/proto/meta.proto" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
