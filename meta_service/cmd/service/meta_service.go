@@ -21,7 +21,7 @@ const (
 )
 
 var (
-	confFile = flag.String("c", defaultConfFile, "The server port")
+	confFile = flag.String("c", defaultConfFile, "The meta server port")
 )
 
 func init() {

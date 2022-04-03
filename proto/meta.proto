@@ -7,13 +7,32 @@ message ChunkServerHealReq {
   string  id=1;
   string ip =2;
   string port=3;
-  int32 block_mb_size=4;
-  int64 total_mb_size=5;
+  double block_mb_size=4;
+  double total_mb_size=5;
   bool  is_init=6;
 }
 message ChunkServerHealResp {
-  int32   code=2;
-  string  msg=3;
+  float blksize=1;
+   uint64 blk_count=2;
+  int32   code=3;
+  string  msg=4;
+  bool  is_init=5;
+}
+message ChunkBlkReq {
+
+  string  id=1;
+  string ip =2;
+  string port=3;
+  double block_mb_size=4;
+  double total_mb_size=5;
+  bool  is_init=6;
+}
+message ChunkBlkResp {
+  float blksize=1;
+  uint64 blk_count=2;
+  int32   code=3;
+  string  msg=4;
+  bool  is_init=5;
 }
 
 

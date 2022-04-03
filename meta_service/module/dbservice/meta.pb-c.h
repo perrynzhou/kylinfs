@@ -30,8 +30,8 @@ struct  Dbservice__ChunkServerHealReq
   char *id;
   char *ip;
   char *port;
-  int32_t block_mb_size;
-  int64_t total_mb_size;
+  double block_mb_size;
+  double total_mb_size;
   protobuf_c_boolean is_init;
 };
 #define DBSERVICE__CHUNK_SERVER_HEAL_REQ__INIT \
@@ -42,12 +42,15 @@ struct  Dbservice__ChunkServerHealReq
 struct  Dbservice__ChunkServerHealResp
 {
   ProtobufCMessage base;
+  float blksize;
+  uint64_t blk_count;
   int32_t code;
   char *msg;
+  protobuf_c_boolean is_init;
 };
 #define DBSERVICE__CHUNK_SERVER_HEAL_RESP__INIT \
  { PROTOBUF_C_MESSAGE_INIT (&dbservice__chunk_server_heal_resp__descriptor) \
-    , 0, (char *)protobuf_c_empty_string }
+    , 0, 0, 0, (char *)protobuf_c_empty_string, 0 }
 
 
 /* Dbservice__ChunkServerHealReq methods */
@@ -103,10 +106,10 @@ typedef struct Dbservice__Service_Service Dbservice__Service_Service;
 struct Dbservice__Service_Service
 {
   ProtobufCService base;
-  void (*heal_func)(Dbservice__Service_Service *service,
-                    const Dbservice__ChunkServerHealReq *input,
-                    Dbservice__ChunkServerHealResp_Closure closure,
-                    void *closure_data);
+  void (*modify_chunk_server_meta)(Dbservice__Service_Service *service,
+                                   const Dbservice__ChunkServerHealReq *input,
+                                   Dbservice__ChunkServerHealResp_Closure closure,
+                                   void *closure_data);
 };
 typedef void (*Dbservice__Service_ServiceDestroy)(Dbservice__Service_Service *);
 void dbservice__service__init (Dbservice__Service_Service *service,
@@ -115,11 +118,11 @@ void dbservice__service__init (Dbservice__Service_Service *service,
     { &dbservice__service__descriptor, protobuf_c_service_invoke_internal, NULL }
 #define DBSERVICE__SERVICE__INIT(function_prefix__) \
     { DBSERVICE__SERVICE__BASE_INIT,\
-      function_prefix__ ## heal_func  }
-void dbservice__service__heal_func(ProtobufCService *service,
-                                   const Dbservice__ChunkServerHealReq *input,
-                                   Dbservice__ChunkServerHealResp_Closure closure,
-                                   void *closure_data);
+      function_prefix__ ## modify_chunk_server_meta  }
+void dbservice__service__modify_chunk_server_meta(ProtobufCService *service,
+                                                  const Dbservice__ChunkServerHealReq *input,
+                                                  Dbservice__ChunkServerHealResp_Closure closure,
+                                                  void *closure_data);
 
 /* --- descriptors --- */
 

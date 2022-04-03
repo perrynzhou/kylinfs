@@ -139,7 +139,7 @@ static const ProtobufCFieldDescriptor dbservice__chunk_server_heal_req__field_de
     "block_mb_size",
     4,
     PROTOBUF_C_LABEL_NONE,
-    PROTOBUF_C_TYPE_INT32,
+    PROTOBUF_C_TYPE_DOUBLE,
     0,   /* quantifier_offset */
     offsetof(Dbservice__ChunkServerHealReq, block_mb_size),
     NULL,
@@ -151,7 +151,7 @@ static const ProtobufCFieldDescriptor dbservice__chunk_server_heal_req__field_de
     "total_mb_size",
     5,
     PROTOBUF_C_LABEL_NONE,
-    PROTOBUF_C_TYPE_INT64,
+    PROTOBUF_C_TYPE_DOUBLE,
     0,   /* quantifier_offset */
     offsetof(Dbservice__ChunkServerHealReq, total_mb_size),
     NULL,
@@ -200,11 +200,35 @@ const ProtobufCMessageDescriptor dbservice__chunk_server_heal_req__descriptor =
   (ProtobufCMessageInit) dbservice__chunk_server_heal_req__init,
   NULL,NULL,NULL    /* reserved[123] */
 };
-static const ProtobufCFieldDescriptor dbservice__chunk_server_heal_resp__field_descriptors[2] =
+static const ProtobufCFieldDescriptor dbservice__chunk_server_heal_resp__field_descriptors[5] =
 {
   {
-    "code",
+    "blksize",
+    1,
+    PROTOBUF_C_LABEL_NONE,
+    PROTOBUF_C_TYPE_FLOAT,
+    0,   /* quantifier_offset */
+    offsetof(Dbservice__ChunkServerHealResp, blksize),
+    NULL,
+    NULL,
+    0,             /* flags */
+    0,NULL,NULL    /* reserved1,reserved2, etc */
+  },
+  {
+    "blk_count",
     2,
+    PROTOBUF_C_LABEL_NONE,
+    PROTOBUF_C_TYPE_UINT64,
+    0,   /* quantifier_offset */
+    offsetof(Dbservice__ChunkServerHealResp, blk_count),
+    NULL,
+    NULL,
+    0,             /* flags */
+    0,NULL,NULL    /* reserved1,reserved2, etc */
+  },
+  {
+    "code",
+    3,
     PROTOBUF_C_LABEL_NONE,
     PROTOBUF_C_TYPE_INT32,
     0,   /* quantifier_offset */
@@ -216,7 +240,7 @@ static const ProtobufCFieldDescriptor dbservice__chunk_server_heal_resp__field_d
   },
   {
     "msg",
-    3,
+    4,
     PROTOBUF_C_LABEL_NONE,
     PROTOBUF_C_TYPE_STRING,
     0,   /* quantifier_offset */
@@ -226,15 +250,30 @@ static const ProtobufCFieldDescriptor dbservice__chunk_server_heal_resp__field_d
     0,             /* flags */
     0,NULL,NULL    /* reserved1,reserved2, etc */
   },
+  {
+    "is_init",
+    5,
+    PROTOBUF_C_LABEL_NONE,
+    PROTOBUF_C_TYPE_BOOL,
+    0,   /* quantifier_offset */
+    offsetof(Dbservice__ChunkServerHealResp, is_init),
+    NULL,
+    NULL,
+    0,             /* flags */
+    0,NULL,NULL    /* reserved1,reserved2, etc */
+  },
 };
 static const unsigned dbservice__chunk_server_heal_resp__field_indices_by_name[] = {
-  0,   /* field[0] = code */
-  1,   /* field[1] = msg */
+  1,   /* field[1] = blk_count */
+  0,   /* field[0] = blksize */
+  2,   /* field[2] = code */
+  4,   /* field[4] = is_init */
+  3,   /* field[3] = msg */
 };
 static const ProtobufCIntRange dbservice__chunk_server_heal_resp__number_ranges[1 + 1] =
 {
-  { 2, 0 },
-  { 0, 2 }
+  { 1, 0 },
+  { 0, 5 }
 };
 const ProtobufCMessageDescriptor dbservice__chunk_server_heal_resp__descriptor =
 {
@@ -244,7 +283,7 @@ const ProtobufCMessageDescriptor dbservice__chunk_server_heal_resp__descriptor =
   "Dbservice__ChunkServerHealResp",
   "dbservice",
   sizeof(Dbservice__ChunkServerHealResp),
-  2,
+  5,
   dbservice__chunk_server_heal_resp__field_descriptors,
   dbservice__chunk_server_heal_resp__field_indices_by_name,
   1,  dbservice__chunk_server_heal_resp__number_ranges,
@@ -253,10 +292,10 @@ const ProtobufCMessageDescriptor dbservice__chunk_server_heal_resp__descriptor =
 };
 static const ProtobufCMethodDescriptor dbservice__service__method_descriptors[1] =
 {
-  { "HealFunc", &dbservice__chunk_server_heal_req__descriptor, &dbservice__chunk_server_heal_resp__descriptor },
+  { "ModifyChunkServerMeta", &dbservice__chunk_server_heal_req__descriptor, &dbservice__chunk_server_heal_resp__descriptor },
 };
 const unsigned dbservice__service__method_indices_by_name[] = {
-  0         /* HealFunc */
+  0         /* ModifyChunkServerMeta */
 };
 const ProtobufCServiceDescriptor dbservice__service__descriptor =
 {
@@ -269,10 +308,10 @@ const ProtobufCServiceDescriptor dbservice__service__descriptor =
   dbservice__service__method_descriptors,
   dbservice__service__method_indices_by_name
 };
-void dbservice__service__heal_func(ProtobufCService *service,
-                                   const Dbservice__ChunkServerHealReq *input,
-                                   Dbservice__ChunkServerHealResp_Closure closure,
-                                   void *closure_data)
+void dbservice__service__modify_chunk_server_meta(ProtobufCService *service,
+                                                  const Dbservice__ChunkServerHealReq *input,
+                                                  Dbservice__ChunkServerHealResp_Closure closure,
+                                                  void *closure_data)
 {
   assert(service->descriptor == &dbservice__service__descriptor);
   service->invoke(service, 0, (const ProtobufCMessage *) input, (ProtobufCClosure) closure, closure_data);

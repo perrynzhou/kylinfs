@@ -5,7 +5,6 @@ import (
 	"io/ioutil"
 )
 
-
 type CliConf struct {
 	BackendAddr string `json:"backend_addr"`
 	BackendPort int    `json:"backend_port"`
