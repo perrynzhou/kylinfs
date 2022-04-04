@@ -5,16 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c42eb867-f953-4a81-9b88-fc3846ed0c8f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/meta_service/service/utils.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/meta_service/cmd/service/meta_service.go" beforeDir="false" afterPath="$PROJECT_DIR$/meta_service/cmd/service/meta_service.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/meta_service/conf/cli_conf.go" beforeDir="false" afterPath="$PROJECT_DIR$/meta_service/conf/cli_conf.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/meta_service/module/dbservice/meta.pb-c.c" beforeDir="false" afterPath="$PROJECT_DIR$/meta_service/module/dbservice/meta.pb-c.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/meta_service/module/dbservice/meta.pb-c.h" beforeDir="false" afterPath="$PROJECT_DIR$/meta_service/module/dbservice/meta.pb-c.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/meta_service/service/metaservice.go" beforeDir="false" afterPath="$PROJECT_DIR$/meta_service/service/metaservice.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pb/meta.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/pb/meta.pb.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/proto/meta.proto" beforeDir="false" afterPath="$PROJECT_DIR$/proto/meta.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/chunk_meta.go" beforeDir="false" afterPath="$PROJECT_DIR$/utils/chunk_meta.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,6 +26,9 @@
   </component>
   <component name="GoLibraries">
     <option name="indexEntireGoPath" value="false" />
+  </component>
+  <component name="MacroExpansionManager">
+    <option name="directoryName" value="ulb5pobq" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -58,6 +53,9 @@
     <property name="go.sdk.automatically.set" value="true" />
     <property name="go.watchers.conflict.with.on.save.actions.check.performed" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="org.rust.cargo.project.model.PROJECT_DISCOVERY" value="true" />
+    <property name="org.rust.hideNoCargoProjectNotifications/Users/perrynzhou/Source/perrynzhou/kylinfs/chunk_service/src/main.rs" value="true" />
+    <property name="org.rust.hideToolchainNotifications" value="true" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.DirectoryMappings" />
   </component>
   <component name="RecentsManager">
