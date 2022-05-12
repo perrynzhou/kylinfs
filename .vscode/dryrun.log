@@ -1,0 +1,6 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory '/home/perrynzhou/Source/perrynzhou/kylinfs'
+make: Leaving directory '/home/perrynzhou/Source/perrynzhou/kylinfs'
+ 
+make: *** No targets specified and no makefile found.  Stop.
+
