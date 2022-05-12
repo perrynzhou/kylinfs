@@ -1,12 +1,12 @@
 /*************************************************************************
-    > File Name: kv_object.h
+    > File Name: item_object.h
   > Author:perrynzhou
   > Mail:perrynzhou@gmail.com
   > Created Time: Thu 12 May 2022 01:29:54 PM UTC
  ************************************************************************/
 
-#ifndef _KV_OBJECT_H
-#define _KV_OBJECT_H
+#ifndef _ITEM_H
+#define _ITEM_H
 
 #include <stdint.h>
 /*
@@ -30,6 +30,7 @@ typedef union item_val
   {
     uint64_t chunk_id;
     uint64_t offset;
+    uint32_t  size;
   } file_obj;
 
 } item_val;
