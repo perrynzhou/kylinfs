@@ -7,7 +7,7 @@
 
 #ifndef _ITEM_H
 #define _ITEM_H
-
+#include <stdio.h>
 #include <stdint.h>
 /*
     dir:   /        1
@@ -16,6 +16,7 @@
 */
 typedef struct item_key
 {
+  size_t  size;
   uint64_t parent_uid;
   char object_name[0];
 } item_key;
